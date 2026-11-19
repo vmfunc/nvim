@@ -20,9 +20,9 @@
 
 ```
 lsp + completion      telescope + neo-tree      rust/go/ts/c++
-lazygit + diffview    ai (avante/codecompanion) remote dev (distant)
-google calendar       obsidian integration      discord presence
-animations            smear cursor              a duck
+lazygit + diffview    claude code               remote dev (distant)
+discord presence      animations                smear cursor
+a duck
 ```
 
 ---
@@ -44,7 +44,7 @@ lazy.nvim bootstraps itself. just open nvim and wait.
 |----------|----------|
 | neovim 0.11+ | lazygit |
 | nerd font | distant cli |
-| ripgrep, fd | |
+| ripgrep, fd | claude code cli |
 
 ---
 
@@ -59,22 +59,10 @@ leader is `space`. press it and wait for which-key.
 | `ctrl+`` | terminal |
 | `space g` | git |
 | `space D` | remote dev |
-| `space o` | obsidian |
+| `space a` | claude code |
+| `space o` | vault |
 
 full list in `lua/config/keymaps.lua`
-
----
-
-### google calendar
-
-optional. needs oauth credentials.
-
-```sh
-cp .env.example .env
-# add your google cloud oauth credentials
-```
-
-see [google cloud console](https://console.cloud.google.com/) to create a project and enable calendar api.
 
 ---
 
@@ -84,7 +72,6 @@ see [google cloud console](https://console.cloud.google.com/) to create a projec
 lua/
 ├── config/          options, keymaps
 ├── plugins/         lazy.nvim specs
-├── custom/          custom plugins (gcal)
 └── neo-tree/        custom sources (distant)
 ```
 

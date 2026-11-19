@@ -62,16 +62,7 @@ map("n", "<C-5>", ":BufferLineGoToBuffer 5<CR>", { silent = true })
 -- === GO TO (Ctrl+G) ===
 map("n", "<C-g>", ":Telescope lsp_document_symbols<CR>", { desc = "Go to symbol" })
 
--- === OBSIDIAN / VAULT (Leader+o) ===
-map("n", "<leader>on", ":Obsidian new<CR>", { desc = "New note" })
-map("n", "<leader>oo", ":Obsidian open<CR>", { desc = "Open in Obsidian" })
-map("n", "<leader>os", ":Obsidian search<CR>", { desc = "Search notes" })
-map("n", "<leader>oq", ":Obsidian quick_switch<CR>", { desc = "Quick switch" })
-map("n", "<leader>ot", ":Obsidian today<CR>", { desc = "Today's note" })
-map("n", "<leader>oy", ":Obsidian yesterday<CR>", { desc = "Yesterday's note" })
-map("n", "<leader>ob", ":Obsidian backlinks<CR>", { desc = "Backlinks" })
-map("n", "<leader>ol", ":Obsidian links<CR>", { desc = "Links" })
-map("n", "<leader>od", ":Obsidian toggle_checkbox<CR>", { desc = "Toggle checkbox" })
+-- === VAULT (Leader+o) ===
 map("n", "<leader>ov", ":edit ~/vault/<CR>", { desc = "Open vault" })
 map("n", "<leader>op", ":edit ~/vault/personal/plan.md<CR>", { desc = "Personal plan" })
 map("n", "<leader>owp", ":edit ~/vault/work/plan.md<CR>", { desc = "Work plan" })
@@ -125,16 +116,6 @@ map("n", "J", "mzJ`z", { desc = "Join lines (keep cursor)" })
 map("n", "n", "nzzzv", { desc = "Next match (centered)" })
 map("n", "N", "Nzzzv", { desc = "Prev match (centered)" })
 
--- === GOOGLE CALENDAR (Leader+c) ===
-map("n", "<leader>ct", ":GcalToday<CR>", { desc = "Today's events" })
-map("n", "<leader>cw", ":GcalWeek<CR>", { desc = "This week" })
-map("n", "<leader>ca", ":GcalAdd<CR>", { desc = "Add event" })
-map("n", "<leader>cs", ":GcalSyncTask<CR>", { desc = "Sync task to calendar" })
-map("n", "<leader>cwt", ":GcalTodayWork<CR>", { desc = "Work - today" })
-map("n", "<leader>cww", ":GcalWeekWork<CR>", { desc = "Work - week" })
-map("n", "<leader>cpt", ":GcalTodayPersonal<CR>", { desc = "Personal - today" })
-map("n", "<leader>cpw", ":GcalWeekPersonal<CR>", { desc = "Personal - week" })
-
 -- === TROUBLE / DIAGNOSTICS (Leader+x) ===
 map("n", "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", { desc = "Diagnostics (workspace)" })
 map("n", "<leader>xX", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", { desc = "Diagnostics (buffer)" })
@@ -147,8 +128,7 @@ map("n", "<leader>xq", "<cmd>Trouble qflist toggle<cr>", { desc = "Quickfix list
 -- === WHICH-KEY GROUPS ===
 -- These will show up nicely in which-key
 map("n", "<leader>f", "", { desc = "+find" })
-map("n", "<leader>o", "", { desc = "+obsidian" })
-map("n", "<leader>c", "", { desc = "+calendar" })
+map("n", "<leader>o", "", { desc = "+vault" })
 map("n", "<leader>g", "", { desc = "+git" })
 map("n", "<leader>t", "", { desc = "+todo" })
 map("n", "<leader>x", "", { desc = "+trouble" })

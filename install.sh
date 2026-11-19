@@ -109,8 +109,6 @@ main() {
   echo ""
   info "done! run 'nvim' to start. plugins will install automatically."
   echo ""
-  warn "for google calendar integration, copy .env.example to .env and add your credentials"
-  echo ""
 }
 
 main
